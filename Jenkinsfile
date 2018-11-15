@@ -2,7 +2,7 @@
 node {
   stage('Build') {
     echo 'Building...'
-    echo "Running $env.BUILD_ID} on ${env.JENKINS_URL}"
+    echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
   }  
   stage('Test') {
     echo 'Testing...'
