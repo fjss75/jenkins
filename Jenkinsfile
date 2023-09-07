@@ -1,13 +1,19 @@
-#!/usr/bin/env groovy
-node {
-  stage('Build') {
-    echo 'Building...'
-    echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-  }  
-  stage('Test') {
-    echo 'Testing...'
-  }
-  stage('Deploy') {
-    echo 'Deploying...'
+pipeline {
+  agent any
+  stages {
+    stage("build") {
+      steps {
+        echo 'building the application...'
+      }
+    stage("test") {
+      steps {
+        echo 'testing the application...'
+      }
+    stage("deploy") {
+      steps {
+        echo 'deploying the application...'
+
+      }
+    }  
   }
 }
